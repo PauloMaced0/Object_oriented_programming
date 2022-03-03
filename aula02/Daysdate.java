@@ -14,19 +14,13 @@ public class Daysdate {
 
         switch (month){
             case "novembro":
-                days = 30;
-                break;
             case "abril":
-                days = 30;
-                break;
             case "junho":
-                days = 30;
-                break;
             case "setembro":
                 days = 30;
                 break;
             case "fevereiro":
-                if ((year%4 == 0) && (year%400 == 0) && (year%100 == 0)){
+                if ((year%4 == 0) && (year%100 != 0) || (year%400 == 0)){
                     days = 29;
                 } else { 
                     days = 28;
