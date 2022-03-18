@@ -1,7 +1,7 @@
 package aula01;
 import java.util.Scanner;
 
-public class invest {
+public class Invest {
     public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     double investment,tax,mes_1,mes_2,mes_3;
