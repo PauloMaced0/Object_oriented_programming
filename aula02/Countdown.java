@@ -8,7 +8,7 @@ public class Countdown {
         int number = sc.nextInt();
         
         
-        for(int i = number;i >= 0;i++){
+        for(int i = number;i >= 0;i--){
             System.out.println(i);
             
         }
