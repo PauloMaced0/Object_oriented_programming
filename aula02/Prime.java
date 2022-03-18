@@ -9,6 +9,9 @@ public class Prime {
         while(number < 1){
             System.out.println("Number:???");
             number = sc.nextInt();
+            if(number<1){
+               System.out.println("Tem que ser maior que zero!"); 
+            }
         }
         boolean prime = true;
         for(int i = 2; i<number;i++){
