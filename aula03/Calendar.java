@@ -30,7 +30,7 @@ public class Calendar {
                 } break;
             default: days = 31; 
         }
-        
+        System.out.printf(" %10s de %4s\n",month,year);
         System.out.println("----------------------");
         System.out.printf("|%2s %2s %2s %2s %2s %2s %2s|\n","Mo","Tu","We","Th","Fr","Sa","Su" );
         System.out.println("----------------------");
