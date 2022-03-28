@@ -6,9 +6,11 @@ public class Acron {
         String[] strarray = string.split(" +");
         
         String acronim = "";
-        for(String word : strarray){
-            if (Character.isUpperCase(word.charAt(0))){
-                acronim += word.charAt(0);
+        
+        //for(String word : strarray){
+        for(int i = 0;i<3;i++){  
+            if (Character.isUpperCase(strarray[i].charAt(0))){
+                    acronim += strarray[i].charAt(0);
             }
         }
         return acronim;
