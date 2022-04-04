@@ -1,7 +1,7 @@
 package aula03;
 import java.util.Scanner;
 
-public class Calendar {
+public class Calendr {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
