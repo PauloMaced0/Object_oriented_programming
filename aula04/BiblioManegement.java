@@ -7,7 +7,7 @@ public class BiblioManegement {
 
         Book catalogo[] = new Book[10];
         catalogo[0] = new Book("Java 8", "CONDICIONAL");
-        catalogo[1] = new Book("POO em Java 8","NORMAL");
+        catalogo[1] = new Book("POO em Java 8");
         catalogo[2] = new Book("Java para totós", "NORMAL");
         System.out.println("ID = " + catalogo[1].getId() + ", " + catalogo[1].getTitulo());
         catalogo[2].setTipoEmprestimo("CONDICIONAL");
