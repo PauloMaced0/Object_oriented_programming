@@ -11,7 +11,8 @@ public class Book {
         this.tipoEmprestimo = tipoEmprestimo;
         setId(++idcount);
     }
-    public Book(String titulo){
+
+    public Book(String titulo) {
         this.titulo = titulo;
         setId(++idcount);
     }
@@ -44,8 +45,4 @@ public class Book {
         return "Livro " + getId() + "; " + getTitulo() + "; " + getTipoEmprestimo();
     }
 
-    public String books(int newbook) {
-        
-        return "nada";
-    }
 }
