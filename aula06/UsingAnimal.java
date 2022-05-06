@@ -15,12 +15,17 @@ public class UsingAnimal {
         // PeixeDourado dou = new PeixeDourado();
         // Arara ara = new Arara();
 
-        r.mover(); // polimorfismo
-        p.mover(); // polimorfismo RESULTADOS DIFERENTES USANDO O MESMO METODO!
-        a.mover(); // polimorfismo
+        r.mover(); // @OVERRIDE
+        p.mover(); // @OVERRIDE RESULTADOS DIFERENTES USANDO O MESMO METODO!
+        a.mover(); // @OVERRIDE
 
-        can.mover();
-        ca.mover();
-        ca.emitirSom();
+        can.mover();    //@OVERRIDE
+        ca.mover();     //@OVERRIDE
+        ca.emitirSom(); //@OVERRIDE
+
+        ca.reagir("olá");
+        ca.reagir(false);
+        ca.reagir(14, 29);
+        ca.reagir(12, 52.1);
     }
 }
