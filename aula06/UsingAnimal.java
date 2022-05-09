@@ -23,9 +23,9 @@ public class UsingAnimal {
         ca.mover();     //@OVERRIDE
         ca.emitirSom(); //@OVERRIDE
 
-        ca.reagir("olá");
-        ca.reagir(false);
-        ca.reagir(14, 29);
-        ca.reagir(12, 52.1);
+        ca.reagir("olá");           // SOBREPOSIÇAO 
+        ca.reagir(false);            // SOBREPOSIÇAO
+        ca.reagir(14, 29);      // SOBREPOSIÇAO
+        ca.reagir(12, 52.1);  // SOBREPOSIÇAO
     }
 }
