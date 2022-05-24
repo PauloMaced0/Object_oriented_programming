@@ -1,11 +1,11 @@
 package aula05;
 
-public abstract class Pessoa {
+public class Pessoa {
     private String name;
     private int cc;
     private Date birthdate;
 
-    Pessoa(String name, int cc,Date birthDate){
+    public Pessoa(String name, int cc,Date birthDate){
         this.name = name;
         this.cc = cc;
         this.birthdate = birthDate; 
