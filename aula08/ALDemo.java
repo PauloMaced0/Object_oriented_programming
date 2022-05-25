@@ -71,22 +71,22 @@ public class ALDemo {
         }
 
         System.out.println("TreeSet");
-        Set<Date> c4 = new TreeSet<>();
+        Set<DateComp> c4 = new TreeSet<>();
 
-        Date d1 = new Date(12, 4, 2000);
-        Date d2 = new Date(23, 7, 2001);
-        Date d3 = new Date(16, 9, 1991);
-        Date d4 = new Date(9, 1, 2017);
-        Date d5 = new Date(29, 11, 1981);
+        DateComp d1 = new DateComp(12, 4, 2000);
+        DateComp d2 = new DateComp(23, 7, 2001);
+        DateComp d3 = new DateComp(16, 9, 1991);
+        DateComp d4 = new DateComp(9, 1, 2017);
+        DateComp d5 = new DateComp(29, 11, 1981);
 
         c4.add(d1);
-        c4.add(d2);   // completar DateComp
+        c4.add(d2);   
         c4.add(d3);
         c4.add(d4);
         c4.add(d5);
 
         System.out.println(c4);
-        for (Iterator<Date> i = c4.iterator(); i.hasNext();) {
+        for (Iterator<DateComp> i = c4.iterator(); i.hasNext();) {
             System.out.println(i.next());
         }
 
