@@ -13,5 +13,10 @@ public class UsingConjTermV2 {
         conj.add("vermelho", "Cor do sangue");
         conj.add("azul", "Cor do céu");
         System.out.println(conj);
+
+        System.out.println("\nRandom significado de branco");
+        for (int repeat = 1; repeat <= 10;repeat++) {
+            System.out.println(conj.randomSignificado("branco"));
+        }
     }
 }

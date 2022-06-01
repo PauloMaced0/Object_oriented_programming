@@ -6,7 +6,7 @@ public class ConjTermV2 {
     private String termo;
     private String significado;
     TreeMap<String, ArrayList<String>> conj = new TreeMap<>();
-
+    Random r = new Random();
     public ConjTermV2() {
     }
 
@@ -19,6 +19,11 @@ public class ConjTermV2 {
             conj.put(termo, new ArrayList<>());
             conj.get(termo).add(significado);
         }
+    }
+
+    public String randomSignificado(String key){       
+        int rand = r.nextInt(conj.get(key).size());
+        return conj.get(key).get(rand);
     }
 
     public String getSignificado() {

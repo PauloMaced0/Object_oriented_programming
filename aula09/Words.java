@@ -8,22 +8,28 @@ public class Words {
     public static void main(String[] args) throws IOException {
         ArrayList<String> list_words = new ArrayList<>();
         Scanner sc = new Scanner(new FileReader("words.txt"));
-        String specialCharactersString = "!@#$%&*()'+,-./:;<=>?[]^_`{|}";
+
         while (sc.hasNext()) {
             String word = sc.next();
             if (word.length() > 2) {
                 list_words.add(word);
             }
-            if (word.substring(word.length()-1).equals("s")) {
+        }
+        System.out.println("Palavras que terminam em S\n");
+        for (String word : list_words) {
+            if (word.substring(word.length() - 1).equals("s")) {
                 System.out.println(word);
 
             }
         }
-        // remoover palavras com ch especias!
-        // for (Iterator<String> i = list_words.iterator(); i.hasNext();) {
+        for (int i = 0; i < list_words.size(); i++) {
+            if (!list_words.get(i).matches("[a-zA-Z]+")) {
+                list_words.remove(i);
+            }
+        }
 
-        // }
-
-        // System.out.println(list_words);
+        System.out.println("\nLista Final\n");
+        System.out.println(list_words);
     }
+
 }
