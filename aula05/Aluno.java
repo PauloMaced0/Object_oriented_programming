@@ -7,7 +7,7 @@ public class Aluno extends Pessoa {
     private Date resgDate;
     private int NMec;
 
-    Aluno(String name,int cc,Date birthDate,Date resgDate){
+    public Aluno(String name,int cc,Date birthDate,Date resgDate){
         super(name,cc,birthDate);
         this.resgDate = resgDate;
         this.NMec = nMec;
