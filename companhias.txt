@@ -14,3 +14,5 @@ SN	Brussels Airlines
 TK	Turkish Airlines
 TO	Transavia France
 TP	TAP Portugal
+VY	Vueling Airlines
+ZI	Aigle Azur
