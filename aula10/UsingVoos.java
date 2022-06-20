@@ -73,7 +73,7 @@ public class UsingVoos {
 
     public static String media_atrasos(TreeMap<String, String> TreeMap) {
         String headtable = String.format("%-21s %-7s \n", "Companhia", "Atraso médio");
-        TreeMap.forEach((key, atraso) -> content3 += String.format("%-21s %-7s \n", key,atraso));
+        TreeMap.forEach((key, atraso) -> content3 += String.format("%-21s %-7s \n", key, atraso));
         return headtable + content3;
     }
 
