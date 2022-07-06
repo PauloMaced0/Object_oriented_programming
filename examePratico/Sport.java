@@ -1,3 +1,5 @@
+package examePratico;
+
 public class Sport extends Activity {
     Sport.Modality mod;
     Integer val;

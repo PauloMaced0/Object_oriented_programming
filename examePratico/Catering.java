@@ -1,3 +1,5 @@
+package examePratico;
+
 public class Catering extends Activity {
     Catering.Option op;
     Integer val;

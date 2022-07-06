@@ -1,3 +1,5 @@
+package examePratico;
+
 public enum Option {
     FULL_MENU,DRINKS_AND_SNACKS,ARCHITECTURAL_TOUR,ART_MUSEUM,WINE_TASTING,
 }

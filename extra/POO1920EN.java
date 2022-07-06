@@ -1,4 +1,4 @@
-package teste;
+package extra;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -8,9 +8,9 @@ import java.util.List;
 import java.util.Scanner;
 
 // Notas:
-// Não altere o código apresentado
-// Deve completar o código da alinea 2
-// Comentar código para garantir que vai executando parcialmente
+// Nï¿½o altere o cï¿½digo apresentado
+// Deve completar o cï¿½digo da alinea 2
+// Comentar cï¿½digo para garantir que vai executando parcialmente
 
 public class POO1920EN {
 
@@ -28,10 +28,10 @@ public class POO1920EN {
 	}
 
 	/**
-	 *  alínea 1
+	 *  alï¿½nea 1
 	 */
 	private static void alinea1(PrintStream out) {
-		out.println("\nAlínea 1) ----------------------------------\n");
+		out.println("\nAlï¿½nea 1) ----------------------------------\n");
 
 		Loja loja = new Loja("ePOO -  Loja Online", "epoo@ecommerce.pt");
 
@@ -53,23 +53,23 @@ public class POO1920EN {
 
 		out.println("TOTAL DE PRODUTOS DO MERCADO: " + loja.totalItems());
 							
-														// tipo, marca, modelo, potência, preço
-		Electrodomestico electr1 = new Electrodomestico("Frigorífico", "Bosch","XPTO",1000,780 );
-		Electrodomestico electr2 = new Electrodomestico("Fogão","AEG","XYZ",423); // tipo, marca, modelo, preço
+														// tipo, marca, modelo, potï¿½ncia, preï¿½o
+		Electrodomestico electr1 = new Electrodomestico("Frigorï¿½fico", "Bosch","XPTO",1000,780 );
+		Electrodomestico electr2 = new Electrodomestico("Fogï¿½o","AEG","XYZ",423); // tipo, marca, modelo, preï¿½o
 		electr1.setClasse(ClasseEnergetica.A);
 		
 		//  
 		Telemovel tlm1 = new Telemovel("Motorola","XWZ Model A",560.0 );
-		tlm1.addNota("Melhor Compra 2019"); tlm1.addNota("Em promoção");
+		tlm1.addNota("Melhor Compra 2019"); tlm1.addNota("Em promoï¿½ï¿½o");
 		
 		//
 		Electrodomestico tv1=new Electrodomestico("Televisor","LG","MODEL X",450);
 		tv1.setClasse(ClasseEnergetica.A);
 		tv1.addStock(5);
 		
-		//  descrição de um produto
-		out.println("Descrição de electr1 :"+electr1.getDescricao());
-		//  adicionar à Loja
+		//  descriï¿½ï¿½o de um produto
+		out.println("Descriï¿½ï¿½o de electr1 :"+electr1.getDescricao());
+		//  adicionar ï¿½ Loja
 		loja.add(livro1); loja.add(livro2); loja.add(electr1); 
 		loja.add(electr2); loja.add(tlm1); loja.add(tv1);
  		
@@ -82,7 +82,7 @@ public class POO1920EN {
  
 		// vender alguns produtos
 		if (!tlm1.vender(4)) 
-			out.printf("Unidades insuficientes! Só tem %d em stock.\n",tlm1.getStock());
+			out.printf("Unidades insuficientes! Sï¿½ tem %d em stock.\n",tlm1.getStock());
 
 		if (livro2.vender(100))
 			out.printf("Vendidos %d unidades de \"%s\". Passou a ter %d\n", 100,livro2.getTitulo(),livro2.getStock());
@@ -90,30 +90,30 @@ public class POO1920EN {
 		out.println("TOTAL DE PRODUTOS DO MERCADO: " + loja.totalItems());
 		out.println();
 		
-		//  lista todos os produtos, com preços, numa tabela
+		//  lista todos os produtos, com preï¿½os, numa tabela
 		out.println(loja); 
 		
 		
-		// informação sobre alguns produtos
-		out.println("Informação sobre Frigorífico:");
+		// informaï¿½ï¿½o sobre alguns produtos
+		out.println("Informaï¿½ï¿½o sobre Frigorï¿½fico:");
 		// acesso directo a um Produto dada uma string contendo tipo, nome e marca
-		out.println(loja.getProdutoPelaDescricao("Frigorífico:Bosch/XPTO"));
-		out.println("Informação sobre Telemóvel:");
-		// no caso de Telemóveis acesso apenas por marca(uppercase)/modelo
+		out.println(loja.getProdutoPelaDescricao("Frigorï¿½fico:Bosch/XPTO"));
+		out.println("Informaï¿½ï¿½o sobre Telemï¿½vel:");
+		// no caso de Telemï¿½veis acesso apenas por marca(uppercase)/modelo
 		out.println(loja.getProdutoPelaDescricao("MOTOROLA/XWZ Model A"));
 		
 	}
 
 	/**
-	 * Alínea 2 
+	 * Alï¿½nea 2 
 	 * @param out
 	 */
 	private static void alinea2(PrintStream out) {
-		out.println("\nAlínea 2) ----------------------------------\n");
+		out.println("\nAlï¿½nea 2) ----------------------------------\n");
 	
 		Loja loja = null;
 
-		// TODO:   código em falta 		
+		// TODO:   cï¿½digo em falta 		
 		loja = new Loja("Teste", "Teste");
 		
 		if (loja != null) {
@@ -131,7 +131,7 @@ public class POO1920EN {
 				loja.setNome(line[0]);
 				loja.setEnderecoWeb(line[1]);
 
-				//  reordenar para obter informaço dos produtos por ordem da sua descrição
+				//  reordenar para obter informaï¿½o dos produtos por ordem da sua descriï¿½ï¿½o
 				loja.reorder();
 				
 				List<Produto> prods=loja.produtosPrecoFinalSuperiorA(500.0);
@@ -161,7 +161,7 @@ public class POO1920EN {
 					}
 				}
 			} catch (FileNotFoundException e) {
-				System.out.println("Ficheiro não encontrado!");
+				System.out.println("Ficheiro nï¿½o encontrado!");
 			}
 
 			
@@ -170,7 +170,7 @@ public class POO1920EN {
 
 			out.println("Lista de Todos os Produtos com PVP superior a 500 Euros:");
 			 
-			out.println("Lista de Electrodomésticos com Classe A:");
+			out.println("Lista de Electrodomï¿½sticos com Classe A:");
 			out.println(loja.electrodomesticosClasseX("A"));
 				 
 		}

@@ -1,4 +1,4 @@
-package teste;
+package extra;
 
 public class Autor implements Comparable {
 	private String nome;

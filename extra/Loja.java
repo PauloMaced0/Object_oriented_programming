@@ -1,4 +1,4 @@
-package teste;
+package extra;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -68,7 +68,7 @@ public class Loja {
 	@Override
 	public String toString() {
 		String desc = nome + "\n";
-		desc += String.format("%10s %-30s %10s %10s\n", "Código", "Produto", "Em Stock", "PVP");
+		desc += String.format("%10s %-30s %10s %10s\n", "Cï¿½digo", "Produto", "Em Stock", "PVP");
 		
 		for (Produto p: produtos)
 			desc += String.format("%10s %-30s %10d %10.2f\n", p.getCodigo(), p.getDescricao(), p.getStock(), p.getPreco());

@@ -1,4 +1,4 @@
-package teste;
+package extra;
 
 public abstract class Produto implements PVP {
 	private static int proximoCodigo = 1000;

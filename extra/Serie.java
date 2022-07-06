@@ -1,4 +1,4 @@
-package teste;
+package extra;
 
 public class Serie extends Produto {
 	public static final int IVA = 23;
