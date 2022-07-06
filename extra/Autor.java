@@ -1,6 +1,6 @@
 package extra;
 
-public class Autor implements Comparable {
+public class Autor implements Comparable<Object> {
 	private String nome;
 	private int anoNascimento;
 	

@@ -29,7 +29,6 @@ public class Telemovel extends Produto {
 
 	@Override
 	public String getDescricao() {
-		// TODO Auto-generated method stub
 		return this.marca+"/"+this.modelo;
 	}
 

@@ -134,7 +134,7 @@ public class POO1920EN {
 				//  reordenar para obter informa�o dos produtos por ordem da sua descri��o
 				loja.reorder();
 				
-				List<Produto> prods=loja.produtosPrecoFinalSuperiorA(500.0);
+				// List<Produto> prods=loja.produtosPrecoFinalSuperiorA(500.0);
 				
 				while (sc.hasNextLine()) {
 					line = sc.nextLine().split(";");

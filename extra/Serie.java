@@ -4,11 +4,10 @@ public class Serie extends Produto {
 	public static final int IVA = 23;
 	
 	private String titulo;
-	private int ano;
 	
 	public Serie(double preco) {
 		super("S", preco);
-		// TODO Auto-generated constructor stub
+	
 	}
 
 	@Override
@@ -18,7 +17,7 @@ public class Serie extends Produto {
 
 	@Override
 	public String getDescricao() {
-		// TODO Auto-generated method stub
+		
 		return titulo;
 	}
 }
