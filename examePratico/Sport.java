@@ -2,30 +2,37 @@ package examePratico;
 
 public class Sport extends Activity {
     Sport.Modality mod;
-    Integer val;
 
-    Sport(Modality mod, Integer val) {
+    Sport(Modality mod, int nrParticipantes) {
+        super(nrParticipantes,30);
         this.mod = mod;
-        this.val = val;
     }
 
     public Sport.Modality getMod() {
         return mod;
     }
 
-    public Integer getVal() {
-        return val;
-    }
-
     public void setMod(Sport.Modality mod) {
         this.mod = mod;
     }
 
-    public void setVal(Integer val) {
-        this.val = val;
+    enum Modality {
+        KAYAK ("Kayak"), HIKING("Hiking"), BIKE("Bike"), BOWLING("Bowling");
+
+        private final String name;
+
+        private Modality(String s){
+            name = s;
+        }
+
+        @Override
+        public String toString() {
+            return this.name;
+        }
     }
 
-    enum Modality {
-        KAYAK, HIKING
+    @Override
+    public String toString() {
+        return String.format("      %s sporting activity with %s participants.",getMod(),getNrParticipantes());
     }
 }

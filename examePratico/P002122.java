@@ -2,8 +2,10 @@ package examePratico;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.PrintStream;
 import java.time.LocalDate;
+import java.util.Scanner;
 
 // Notas:
 // Não altere o código apresentado
@@ -19,9 +21,9 @@ public class P002122 {
 		fl.close();
 	}
 
-	private static void test(PrintStream out) {
+	private static void test(PrintStream out) throws FileNotFoundException {
 		alinea1(out);
-		// alinea2(out);
+		alinea2(out);
 	}
 
 	private static void alinea1(PrintStream out) {
@@ -52,33 +54,60 @@ public class P002122 {
 			.addActivity(new Culture(Culture.Option.WINE_TASTING, 20));
 
 		
-		// out.println(grandesEventos.listClients());
-		// out.println();
-		// out.println(grandesEventos.listEvents());
+		out.println(grandesEventos.listClients());
+		out.println();
+		out.println(grandesEventos.listEvents());
 		
 	}
 
-	// private static void alinea2(PrintStream out) {
-	// 	out.println("\nAlínea 2) ----------------------------------\n");
-	// 	EventManager em = null; // modificar
+	private static void alinea2(PrintStream out) throws FileNotFoundException {
+		out.println("\nAlínea 2) ----------------------------------\n");
+		EventManager em = new EventManager("Funny Sports"); // modificar
 		
-	// 	// Adicione a seguir o código necessário para a leitura do ficheiro 
+		// Adicione a seguir o código necessário para a leitura do ficheiro 
+
+		Scanner sc = new Scanner(new FileReader("events.txt"));
+		
+		Event evento = null;
+
+		while(sc.hasNext()){
+			String line = sc.nextLine();
+			char firstChar = line.charAt(0);
+			String [] data = line.substring(2).split(",");
+
+			switch(firstChar){
+				case '#':
+					Client cliente = em.addClient(data[0], data[1]);
+					evento = em.addEvent(cliente, LocalDate.parse(data[2]));
+					break;
+				case '*':
+					if(data[0].equals("Culture")){
+						evento.addActivity(new Culture(Culture.Option.valueOf(data[1]), Integer.parseInt(data[2])));
+					} else if (data[0].equals("Sport")){
+						evento.addActivity(new Sport(Sport.Modality.valueOf(data[1]), Integer.parseInt(data[2])));
+					} else if(data[0].equals("Catering")) {
+						evento.addActivity(new Catering(Catering.Option.valueOf(data[1]), Integer.parseInt(data[2])));
+					}
+					break;
+				default:
+					System.out.println("OPS...");
+			}
+		}
 
 
 
 
+        // não modifique o metodo a partir daqui. Pode comentar para executar o programa
 
-    //     // não modifique o metodo a partir daqui. Pode comentar para executar o programa
-
-	// 	if (em != null) {
-	// 		out.println(em + ": CLIENTES COM EVENTOS");
-	// 		for (String s: em.clientsWithEvents())  // devolve todos os clientes com eventos agendados
-	// 			out.println(s); 
-	// 		out.println("\n" + em + ": LISTA DE PRÓXIMOS EVENTOS ORDENADOS POR DATA");	
-	// 		for (String s: em.nextEventsByDate())  // devolve todos os eventos agendados, ordenados por data
-	// 			out.println(s); 
-	// 		out.println();
-	// 	}
-// 	}
+		if (em != null) {
+			out.println(em + ": CLIENTES COM EVENTOS");
+			for (String s: em.clientsWithEvents())  // devolve todos os clientes com eventos agendados
+				out.println(s); 
+			out.println("\n" + em + ": LISTA DE PRÓXIMOS EVENTOS ORDENADOS POR DATA");	
+			for (String s: em.nextEventsByDate())  // devolve todos os eventos agendados, ordenados por data
+				out.println(s); 
+			out.println();
+		}
+	}
 
 }

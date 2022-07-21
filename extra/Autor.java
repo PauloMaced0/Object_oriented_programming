@@ -24,7 +24,6 @@ public class Autor implements Comparable<Object> {
 
 	@Override
 	public int compareTo(Object o) {
-		// TODO Auto-generated method stub
 		return this.anoNascimento;
 	}
 

@@ -4,9 +4,9 @@ public class Culture extends Activity {
     Culture.Option op;
     Integer val;
 
-    Culture(Option op, Integer val) {
+    Culture(Option op,int nrParticipantes) {
+        super(nrParticipantes, 22);
         this.op = op;
-        this.val = val;
     }
 
     public Culture.Option getOp() {
@@ -26,7 +26,24 @@ public class Culture extends Activity {
     }
 
     public enum Option {
-        ARCHITECTURAL_TOUR, ART_MUSEUM, RIVER_TOUR, WINE_TASTING
+        ARCHITECTURAL_TOUR ("Architectural tour"), ART_MUSEUM ("Art museum"), RIVER_TOUR ("River tour"), WINE_TASTING ("Wine tasting");
+
+        private final String name;
+
+        private Option(String s){
+            name = s;
+        }
+
+        @Override
+        public String toString(){
+            return this.name;
+        }
+
+    }
+
+    @Override
+    public String toString() {
+        return String.format("      %s with %s participants.",getOp(),getNrParticipantes());
     }
 
 }

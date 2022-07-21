@@ -112,14 +112,10 @@ public class POO1920EN {
 		out.println("\nAl�nea 2) ----------------------------------\n");
 	
 		Loja loja = null;
-
-		// TODO:   c�digo em falta 		
+		
 		loja = new Loja("Teste", "Teste");
 		
 		if (loja != null) {
-
-			
-			// TODO:  COMPLETAR ...
 			
 			try (Scanner sc = new Scanner(new File("epoo20.txt"))) {
 				String[] line;
