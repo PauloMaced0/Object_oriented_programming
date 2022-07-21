@@ -1,4 +1,4 @@
-package extra;
+package examePraticoExtra;
 
 public abstract class Produto implements PVP {
 	private static int proximoCodigo = 1000;

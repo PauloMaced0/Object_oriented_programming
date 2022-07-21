@@ -1,4 +1,4 @@
-package extra;
+package examePraticoExtra;
 
 public class Electrodomestico extends Produto {
 	public static final int IVA = 23;
